@@ -1,0 +1,147 @@
+// Fonts embedded
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+// Fonts
+$font-family: 'Noto Serif', serif;
+
+// Color
+$color-primary: #000000;
+$color-hover: #ff5555;
+
+// Background
+$background-primary: #333333;
+$background-hover: #ff5555;
+
+// Border color
+$border-color: #ff5555;
+
+// size
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// Transition
+@mixin transition( $transition: all 0.4s ease-in-out ) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+// Transform
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+// Flex
+@mixin flex($direction: row, $content: null , $items: null, $wrap: null) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $content;
+  align-items: $items;
+  flex-wrap: $wrap;
+}
+
+// Flex box
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// Flex Flow Direction
+// - applies to: flex containers
+// row | row-reverse | column | column-reverse
+@mixin flex-direction( $direction ) {
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+// Flex Line Wrapping
+// - applies to: flex containers
+// nowrap | wrap | wrap-reverse
+@mixin flex-wrap( $wrap ) {
+  -webkit-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
+// Flex Direction and Wrap
+// - applies to: flex containers
+// <flex-direction> || <flex-wrap>
+@mixin flex-flow( $flow ) {
+  -webkit-flex-flow: $flow;
+  flex-flow: $flow;
+}
+
+// Display Order
+// - applies to: flex items
+// <integer>
+@mixin order( $order ) {
+  -moz-box-ordinal-group: $order;
+  -ms-flex-order: $order;
+  order: $order;
+}
+
+// Flex grow factor
+// - applies to: flex items
+// <number>
+@mixin flex-grow( $flex-grow ) {
+  -webkit-flex-grow: $flex-grow;
+  flex-grow: $flex-grow;
+}
+
+// Flex shrink
+// - applies to: flex item shrink factor
+// <number>
+@mixin flex-shrink( $flex-shrink ) {
+  -webkit-flex-shrink: $flex-shrink;
+  flex-shrink: $flex-shrink;
+}
+
+// Flex basis
+// - the initial main size of the flex item
+// - applies to: flex interstitial main size of the flex item
+// <width>
+@mixin flex-basis( $width ) {
+  -webkit-flex-basis: $width;
+  flex-basis: $width;
+}
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around
+@mixin justify-content( $justify ) {
+  -webkit-justify-content: $justify;
+  justify-content: $justify;
+}
+
+// Packing Flex Lines
+// - applies to: multi-line flex containers
+// flex-start | flex-end | center | space-between | space-around | stretch
+@mixin align-content( $align ) {
+  -webkit-align-content: $align;
+  align-content: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch
+@mixin align-items( $align ) {
+  -webkit-align-items: $align;
+  align-items: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex items
+// auto | flex-start | flex-end | center | baseline | stretch
+@mixin align-self( $align ) {
+  -webkit-align-self: $align;
+  align-self: $align;
+}

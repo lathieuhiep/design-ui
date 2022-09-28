@@ -1,0 +1,13 @@
+.main-header {
+  .grid {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 1fr auto;
+
+    &__item {
+      display: grid;
+      grid-gap: 12px;
+      grid-template-columns: repeat(3, max-content);
+    }
+  }
+}

@@ -1,4 +1,6 @@
 .main-header {
+  border-bottom: 1px solid $border-color-line;
+
   .grid {
     display: grid;
     grid-gap: 12px;
@@ -9,5 +11,9 @@
       grid-gap: 12px;
       grid-template-columns: repeat(3, max-content);
     }
+  }
+
+  .info {
+
   }
 }

@@ -1,6 +1,6 @@
 import {Container} from "@mui/material";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faLocationDot} from "@fortawesome/free-solid-svg-icons";
+
+import SocialNetwork from "~/components/socialNetwork";
 
 function Top() {
     return (
@@ -8,24 +8,24 @@ function Top() {
             <Container>
                 <div className="grid">
                     <div className="grid__item">
-                        <div className="info address">
-                            <FontAwesomeIcon icon={faLocationDot} />
+                        <div className="info">
+                            <i className="fa-solid fa-location-dot"></i>
                             <span className="text">988782, Our Street, S State</span>
                         </div>
 
-                        <div className="info address">
-                            <FontAwesomeIcon icon={faLocationDot} />
-                            <span className="text">988782, Our Street, S State</span>
+                        <div className="info">
+                            <i className="fa-solid fa-envelope"></i>
+                            <span className="text">info@domain.com</span>
                         </div>
 
-                        <div className="info address">
-                            <FontAwesomeIcon icon={faLocationDot} />
-                            <span className="text">988782, Our Street, S State</span>
+                        <div className="info">
+                            <i className="fa-solid fa-mobile-screen"></i>
+                            <span className="text">+1 234 567 18</span>
                         </div>
                     </div>
 
                     <div className="grid__item">
-                        abc
+                        <SocialNetwork />
                     </div>
                 </div>
             </Container>

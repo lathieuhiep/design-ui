@@ -1,12 +1,15 @@
+import {Box} from "@mui/material";
+
+import './socialNetwork.scss'
 import SocialNetworkItem from "./SocialNetworkItem";
 
 function SocialNetwork() {
     return (
-        <div className="social-network">
-            <SocialNetworkItem link={'#'} icon={<i className="fa-brands fa-facebook-f"></i>} />
-            <SocialNetworkItem link={'#'} icon={<i className="fa-brands fa-youtube"></i>} />
-            <SocialNetworkItem link={'#'} icon={<i className="fa-brands fa-twitter"></i>} />
-        </div>
+        <Box className="social-network">
+            <SocialNetworkItem link={'#'} classIcon={'fa-brands fa-facebook-f'} />
+            <SocialNetworkItem link={'#'} classIcon={'fa-brands fa-youtube'} />
+            <SocialNetworkItem link={'#'} classIcon={'fa-brands fa-twitter'} />
+        </Box>
     )
 }
 

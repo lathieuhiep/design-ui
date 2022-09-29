@@ -1,35 +1,25 @@
-import {Container} from "@mui/material";
+import {Box, Container} from "@mui/material";
 
 import SocialNetwork from "~/components/socialNetwork";
+import InfoItem from "./InfoItem";
 
 function Top() {
     return (
-        <header className="main-header">
+        <Box component="header" className="main-header">
             <Container>
-                <div className="grid">
-                    <div className="grid__item">
-                        <div className="info">
-                            <i className="fa-solid fa-location-dot"></i>
-                            <span className="text">988782, Our Street, S State</span>
-                        </div>
+                <Box className="grid">
+                    <Box className="grid__item">
+                        <InfoItem classIcon={'fa-solid fa-location-dot'} text={'988782, Our Street, S State'} />
+                        <InfoItem classIcon={'fa-solid fa-envelope'} text={'info@domain.com'} />
+                        <InfoItem classIcon={'fa-solid fa-mobile-screen'} text={'+1 234 567 18'} />
+                    </Box>
 
-                        <div className="info">
-                            <i className="fa-solid fa-envelope"></i>
-                            <span className="text">info@domain.com</span>
-                        </div>
-
-                        <div className="info">
-                            <i className="fa-solid fa-mobile-screen"></i>
-                            <span className="text">+1 234 567 18</span>
-                        </div>
-                    </div>
-
-                    <div className="grid__item">
+                    <Box className="grid__item">
                         <SocialNetwork />
-                    </div>
-                </div>
+                    </Box>
+                </Box>
             </Container>
-        </header>
+        </Box>
     )
 }
 

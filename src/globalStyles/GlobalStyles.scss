@@ -1,4 +1,19 @@
+@import "./src/assets/scss/mixin";
 
+// Fonts embedded
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+:root {
+  --font-family: 'Noto Serif', serif;
+
+  --color-primary: #000000;
+  --color-hover: #ff5555;
+
+  --background-primary: #333333;
+  --background-hover: #ff5555;
+
+  --border-color: #eeeeee;
+}
 
 * {
   margin: 0;
@@ -11,8 +26,8 @@ html {
 }
 
 body {
-  color: $color-primary;
-  font-family: $font-family;
+  color: var(--color-primary);
+  font-family: var(--font-family);
   font-size: 1.4rem;
   line-height: 1.2;
   font-weight: 400;
@@ -54,7 +69,7 @@ a {
   @include transition();
 
   &:hover {
-    color: $color-hover;
+    color: var(--color-hover);
   }
 }
 
@@ -72,7 +87,7 @@ iframe {
 }
 
 blockquote {
-  border-left: 1px solid $border-color;
+  border-left: 1px solid var(--background-primary);
   padding-left: 30px;
 }
 

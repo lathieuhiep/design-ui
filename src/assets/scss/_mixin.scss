@@ -1,21 +1,3 @@
-// Fonts embedded
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
-
-// Fonts
-$font-family: 'Noto Serif', serif;
-
-// Color
-$color-primary: #000000;
-$color-hover: #ff5555;
-
-// Background
-$background-primary: #333333;
-$background-hover: #ff5555;
-
-// Border color
-$border-color: #ff5555;
-$border-color-line: #eeeeee;
-
 // size
 @mixin size($width, $height: $width) {
   width: $width;
@@ -37,15 +19,6 @@ $border-color-line: #eeeeee;
   transform: $property;
 }
 
-// Flex
-@mixin flex($direction: row, $content: null , $items: null, $wrap: null) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $content;
-  align-items: $items;
-  flex-wrap: $wrap;
-}
-
 // Flex box
 @mixin flexbox() {
   display: -webkit-box;
@@ -53,6 +26,15 @@ $border-color-line: #eeeeee;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+}
+
+// The 'flex' shorthand
+// - applies to: flex items
+// <positive-number>, initial, auto, or none
+@mixin flex( $flex ) {
+  -webkit-flex: $flex;
+  -ms-flex: $flex;
+  flex: $flex;
 }
 
 // Flex Flow Direction
@@ -145,4 +127,14 @@ $border-color-line: #eeeeee;
 @mixin align-self( $align ) {
   -webkit-align-self: $align;
   align-self: $align;
+}
+
+@mixin grid($cols: 1fr, $row-gap : 12px, $column-gap: null) {
+  @if $column-gap == null {
+    $column-gap: $row-gap
+  }
+
+  display: grid;
+  grid-gap: $row-gap $column-gap;
+  grid-template-columns: #{$cols};
 }

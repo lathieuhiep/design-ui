@@ -1,24 +1,59 @@
+import {Link} from "react-router-dom";
 import {Container} from "@mui/material";
 
 import config from "~/config";
+import images from "~/assets/images";
 import MenuItem from "./MenuItem";
 
-function Menu() {
+
+function Menu({ items }) {
+    const renderSubmenu = (data) => {
+        return (
+            <ul className="sub-menu">
+                {data.map((item, index) => {
+                    const isParent = !!item.children;
+
+                    return (
+                        <>
+                            <li key={index} className="menu-item">
+                                <MenuItem title={item.title} to={item.to} />
+
+                                {isParent && (
+                                    renderSubmenu(item.children)
+                                )}
+                            </li>
+                        </>
+                    )
+                })}
+            </ul>
+        )
+    }
+
     return (
         <nav className="main-nav">
             <Container>
                 <div className="main-nav__warp">
-                    <div className="logo"></div>
+                    <Link className="logo" to={config.routes.home}>
+                        <img src={images.logo} alt="logo"/>
+                    </Link>
 
-                    <ul className="menu-primary">
-                        <li>
-                            <MenuItem title={'Trang chủ'} to={config.routes.home} />
-                        </li>
+                    <div className="main-menu">
+                        <ul className="menu-primary">
+                            {items.map((item, index) => {
+                                const isParent = !!item.children;
 
-                        <li>
-                            <MenuItem title={'Khoá học'} to={config.routes.course} />
-                        </li>
-                    </ul>
+                                return (
+                                    <li key={index} className="menu-item">
+                                        <MenuItem title={item.title} to={item.to} />
+
+                                        {isParent && (
+                                            renderSubmenu(item.children)
+                                        )}
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
                 </div>
             </Container>
         </nav>

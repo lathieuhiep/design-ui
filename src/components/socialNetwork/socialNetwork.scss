@@ -1,0 +1,13 @@
+.social-network {
+  .item {
+    color: var(--color-primary);
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+
+    &:hover {
+      color: var(--color-hover);
+    }
+  }
+}

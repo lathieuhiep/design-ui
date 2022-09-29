@@ -1,8 +1,10 @@
-function SocialNetworkItem({ link, icon, ...props }) {
+import {Box} from "@mui/material";
+
+function SocialNetworkItem({ link, classIcon, ...props }) {
     return (
-        <a href={link} target={'_blank'} {...props} rel="noreferrer">
-            {icon}
-        </a>
+        <Box component={'a'} href={link} className={'item'} target={'_blank'} {...props} rel="noreferrer">
+            <Box component={'i'} className={classIcon} />
+        </Box>
     )
 }
 

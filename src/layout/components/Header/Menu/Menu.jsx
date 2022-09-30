@@ -5,7 +5,6 @@ import config from "~/config";
 import images from "~/assets/images";
 import MenuItem from "./MenuItem";
 
-
 function Menu({ items }) {
     const renderSubmenu = (data) => {
         return (
@@ -14,15 +13,13 @@ function Menu({ items }) {
                     const isParent = !!item.children;
 
                     return (
-                        <>
-                            <li key={index} className="menu-item">
-                                <MenuItem title={item.title} to={item.to} />
+                        <li key={index} className={`menu-item${isParent ? ' menu-item-has-children' : ''}`}>
+                            <MenuItem title={item.title} to={item.to} />
 
-                                {isParent && (
-                                    renderSubmenu(item.children)
-                                )}
-                            </li>
-                        </>
+                            {isParent && (
+                                renderSubmenu(item.children)
+                            )}
+                        </li>
                     )
                 })}
             </ul>
@@ -43,7 +40,7 @@ function Menu({ items }) {
                                 const isParent = !!item.children;
 
                                 return (
-                                    <li key={index} className="menu-item">
+                                    <li key={index} className={`menu-item${isParent ? ' menu-item-has-children' : ''}`}>
                                         <MenuItem title={item.title} to={item.to} />
 
                                         {isParent && (

@@ -8,21 +8,27 @@ import MenuItem from "./MenuItem";
 function Menu({ items }) {
     const renderSubmenu = (data) => {
         return (
-            <ul className="sub-menu">
-                {data.map((item, index) => {
-                    const isParent = !!item.children;
+            <>
+                <span className="icon-sub">
+                    <i className="fa-solid fa-chevron-down"></i>
+                </span>
 
-                    return (
-                        <li key={index} className={`menu-item${isParent ? ' menu-item-has-children' : ''}`}>
-                            <MenuItem title={item.title} to={item.to} />
+                <ul className="sub-menu">
+                    {data.map((item, index) => {
+                        const isParent = !!item.children;
 
-                            {isParent && (
-                                renderSubmenu(item.children)
-                            )}
-                        </li>
-                    )
-                })}
-            </ul>
+                        return (
+                            <li key={index} className={`menu-item${isParent ? ' menu-item-has-children' : ''}`}>
+                                <MenuItem title={item.title} to={item.to} end={item.end} />
+
+                                {isParent && (
+                                    renderSubmenu(item.children)
+                                )}
+                            </li>
+                        )
+                    })}
+                </ul>
+            </>
         )
     }
 

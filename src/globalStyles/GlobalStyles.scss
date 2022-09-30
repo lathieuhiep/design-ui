@@ -65,6 +65,7 @@ h6 {
 }
 
 a {
+  color: var(--color-primary);
   text-decoration: none;
   @include transition();
 
@@ -94,4 +95,18 @@ blockquote {
 pre {
   white-space: pre-wrap;
   margin-bottom: 30px;
+}
+
+.warp {
+  min-height: 100vh;
+  @include flexbox();
+  @include flex-direction(column);
+}
+
+.sticky-footer {
+  @include flex(1 0 auto);
+}
+
+.page-content {
+  padding: 50px 0;
 }

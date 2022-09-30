@@ -2,7 +2,7 @@ import config from "~/config";
 
 // Pages
 import Home from "~/pages/Home";
-import Course from "~/pages/course";
+import Course from "~/pages/Course";
 
 // Public routes
 const publicRoutes = [

@@ -2,29 +2,58 @@ import config from "~/config";
 
 const MenuItems = [
     {
-        title: 'Trang chủ',
-        to: config.routes.home
+        title: 'Home',
+        to: config.routes.home,
+        end: true
     },
     {
-        title: 'Khoá học',
+        title: 'Course',
         to: config.routes.course,
+    },
+    {
+        title: 'About',
+        to: '/about'
+    },
+    {
+        title: 'Blog',
+        to: '/blog'
+    },
+    {
+        title: 'Level 1',
+        to: '/level',
         children: [
             {
-                title: 'Ux/Ui',
-                to: config.routes.course,
+                title: 'Level 2',
+                to: '/level',
                 children: [
                     {
-                        title: 'Ux/Ui 2',
-                        to: config.routes.course
+                        title: 'Level 3',
+                        to: '/level'
+                    },
+                    {
+                        title: 'Level 3A',
+                        to: '/level'
+                    },
+                    {
+                        title: 'Level 3B',
+                        to: '/level'
                     }
                 ]
             },
             {
-                title: 'Design',
-                to: config.routes.course
+                title: 'Level 2A',
+                to: '/level'
+            },
+            {
+                title: 'Level 2B',
+                to: '/level'
             },
         ]
-    }
+    },
+    {
+        title: 'Contact',
+        to: '/contact'
+    },
 ]
 
 export { MenuItems }

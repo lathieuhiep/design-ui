@@ -42,7 +42,7 @@
 
   .menu-primary {
     height: 100%;
-    grid-column-gap: 12px;
+    grid-column-gap: 24px;
     @include flexbox();
 
     .menu-item {
@@ -51,12 +51,17 @@
       @include align-items(center);
 
       a {
+        font-size: 1.6rem;
         @include flex(1);
 
         &:hover,
         &.active {
           color: var(--color-hover);
         }
+      }
+
+      .icon-sub {
+        @include transition();
       }
 
       .sub-menu {
@@ -71,7 +76,7 @@
         @include transition();
 
         .menu-item {
-          padding: 6px 8px;
+          padding: 10px 8px;
 
           .sub-menu {
             top: -1px;
@@ -79,6 +84,10 @@
           }
 
           &:hover {
+            .icon-sub {
+              @include transform(rotate(-90deg));
+            }
+
             .sub-menu {
               left: 100%;
               opacity: 1;
@@ -94,6 +103,12 @@
           opacity: 1;
           visibility: visible;
         }
+      }
+    }
+
+    .menu-item-has-children {
+      a {
+        padding-right: 6px;
       }
     }
   }

@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 
-function MenuItem({title, to}) {
+function MenuItem({title, to, ...props}) {
     return (
-        <NavLink to={to} end>
+        <NavLink to={to} {...props}>
             {title}
         </NavLink>
     )

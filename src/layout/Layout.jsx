@@ -1,5 +1,4 @@
 import Header from "./components/Header";
-import {Container} from "@mui/material";
 import Footer from "./components/Footer";
 
 function Layout({ children }) {
@@ -8,13 +7,7 @@ function Layout({ children }) {
             <Header />
 
             <div className="sticky-footer">
-                <div className="page-content">
-                    <Container>
-                        <div className="content">
-                            {children}
-                        </div>
-                    </Container>
-                </div>
+                {children}
             </div>
 
             <Footer />

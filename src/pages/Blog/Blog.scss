@@ -1,0 +1,33 @@
+@import "src/assets/scss/mixin";
+
+.post-item {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+
+  .title {
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+  }
+
+  .meta {
+    margin-bottom: 12px;
+    @include grid('repeat(3, minmax(auto, max-content))');
+
+    span {
+      display: inline-block;
+      font-size: 1.2rem;
+
+      + span {
+        margin-left: 6px;
+      }
+    }
+
+    .right {
+      color: rgba(0,0,0,0.8);
+    }
+  }
+
+  .excerpt {
+    margin-bottom: 12px;
+  }
+}

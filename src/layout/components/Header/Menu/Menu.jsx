@@ -19,7 +19,7 @@ function Menu({ items }) {
 
                         return (
                             <li key={index} className={`menu-item${isParent ? ' menu-item-has-children' : ''}`}>
-                                <MenuItem title={item.title} to={item.to} end={item.end} />
+                                <MenuItem title={item.title} to={item.to} />
 
                                 {isParent && (
                                     renderSubmenu(item.children)

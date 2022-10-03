@@ -1,0 +1,23 @@
+.container-product {
+  .product-title {
+    position: relative;
+    padding-bottom: 18px;
+    font-size: 2.4rem;
+
+    &:after {
+      position: absolute;
+      content: "";
+      width: 50px;
+      height: 3px;
+      left: 0;
+      bottom: 0;
+      background-color: var(--border-color);
+    }
+  }
+
+  .product-price {
+    margin-bottom: 12px;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}

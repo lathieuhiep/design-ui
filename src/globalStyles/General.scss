@@ -102,7 +102,7 @@ pre {
   margin-bottom: 30px;
 }
 
-.warp {
+.template-default {
   min-height: 100vh;
   @include flexbox();
   @include flex-direction(column);

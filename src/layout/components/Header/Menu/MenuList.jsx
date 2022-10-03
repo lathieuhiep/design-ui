@@ -16,7 +16,11 @@ const MenuItems = [
     },
     {
         title: 'Blog',
-        to: '/blog'
+        to: config.routes.blog
+    },
+    {
+        title: 'Shop',
+        to: config.routes.shop
     },
     {
         title: 'Level 1',

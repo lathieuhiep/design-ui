@@ -1,9 +1,9 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "~/layout/components/Header";
+import Footer from "~/layout/components/Footer";
 
-function Layout({ children }) {
+function Layout({ children, classPage }) {
     return (
-        <div className="warp">
+        <div className={`template-default ${classPage}`}>
             <Header />
 
             <div className="sticky-footer">

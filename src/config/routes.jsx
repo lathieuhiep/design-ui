@@ -2,7 +2,8 @@ const routes = {
     home: '/',
     course: '/course',
     blog: '/blog',
-    single: '/single'
+    single: '/single',
+    shop: '/shop'
 }
 
 export default routes

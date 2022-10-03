@@ -1,0 +1,29 @@
+.product-item {
+  .thumbnail {
+    margin-bottom: 12px;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .price {
+    margin-bottom: 6px;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  .add-to-cart {
+    button {
+      font-family: var(--font-family);
+      font-size: 1.4rem;
+      text-transform: capitalize;
+      color: var(--color-primary);
+
+      &:hover {
+        color: var(--color-hover);
+        background-color: transparent;
+      }
+    }
+  }
+}

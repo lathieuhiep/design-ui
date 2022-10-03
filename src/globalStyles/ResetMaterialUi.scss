@@ -1,0 +1,15 @@
+// Pagination
+.MuiPagination-root {
+  .MuiPaginationItem-root {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+
+    &.Mui-selected,
+    &.Mui-selected:hover,
+    &:hover {
+      color: #ffffff;
+      border-color: currentColor;
+      background-color: var(--background-primary);
+    }
+  }
+}

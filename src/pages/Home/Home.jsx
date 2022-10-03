@@ -2,7 +2,7 @@ import {Container} from "@mui/material";
 
 function Home() {
     return (
-        <div className="page-default page-home">
+        <div className="container-wrap container-home">
             <Container>
                 <h2>Home Page</h2>
             </Container>

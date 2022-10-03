@@ -1,9 +1,9 @@
 import {useState} from "react";
-import {Box, Container, FormControl, MenuItem, Pagination, Stack} from "@mui/material";
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import {Box, Container, FormControl, MenuItem, Pagination, Select, Stack} from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 
 import './Shop.scss';
+import config from "~/config";
 import HasSidebar from "~/components/hasSidebar";
 import { SidebarShop } from "~/layout/components/Sidebar";
 import ProductItem from "./components/ProductItem";
@@ -13,8 +13,8 @@ function Shop() {
     const [ordering, setOrdering] = useState('menu_order')
 
     // handle change ordering
-    const handleChangeOrdering = (event: SelectChangeEvent) => {
-        setOrdering(event.target.value)
+    const handleChangeOrdering = (e) => {
+        setOrdering(e.target.value)
     }
 
     return (
@@ -35,7 +35,7 @@ function Shop() {
                             <FormControl fullWidth>
                                 <Select
                                     value={ordering}
-                                    onChange={handleChangeOrdering}
+                                    onChange={(e) => handleChangeOrdering(e)}
                                 >
                                     <MenuItem value={'menu_order'}>Default sorting</MenuItem>
                                     <MenuItem value={'popularity'}>Sort by popularity</MenuItem>
@@ -52,6 +52,7 @@ function Shop() {
                         <Grid xs={columns}>
                             <ProductItem
                                 title={'Long Sleeve Tee'}
+                                to={config.routes.singleProduct}
                                 price={'$25'}
                             />
                         </Grid>
@@ -59,6 +60,7 @@ function Shop() {
                         <Grid xs={columns}>
                             <ProductItem
                                 title={'Long Sleeve Tee'}
+                                to={config.routes.singleProduct}
                                 price={'$25'}
                             />
                         </Grid>
@@ -66,6 +68,7 @@ function Shop() {
                         <Grid xs={columns}>
                             <ProductItem
                                 title={'Long Sleeve Tee'}
+                                to={config.routes.singleProduct}
                                 price={'$25'}
                             />
                         </Grid>
@@ -73,6 +76,7 @@ function Shop() {
                         <Grid xs={columns}>
                             <ProductItem
                                 title={'Long Sleeve Tee'}
+                                to={config.routes.singleProduct}
                                 price={'$25'}
                             />
                         </Grid>
@@ -80,6 +84,7 @@ function Shop() {
                         <Grid xs={columns}>
                             <ProductItem
                                 title={'Long Sleeve Tee'}
+                                to={config.routes.singleProduct}
                                 price={'$25'}
                             />
                         </Grid>
@@ -87,6 +92,7 @@ function Shop() {
                         <Grid xs={columns}>
                             <ProductItem
                                 title={'Long Sleeve Tee'}
+                                to={config.routes.singleProduct}
                                 price={'$25'}
                             />
                         </Grid>
@@ -94,6 +100,7 @@ function Shop() {
                         <Grid xs={columns}>
                             <ProductItem
                                 title={'Long Sleeve Tee'}
+                                to={config.routes.singleProduct}
                                 price={'$25'}
                             />
                         </Grid>
@@ -101,6 +108,7 @@ function Shop() {
                         <Grid xs={columns}>
                             <ProductItem
                                 title={'Long Sleeve Tee'}
+                                to={config.routes.singleProduct}
                                 price={'$25'}
                             />
                         </Grid>

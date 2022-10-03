@@ -3,7 +3,8 @@ const routes = {
     course: '/course',
     blog: '/blog',
     single: '/single',
-    shop: '/shop'
+    shop: '/shop',
+    singleProduct: '/single-product'
 }
 
 export default routes

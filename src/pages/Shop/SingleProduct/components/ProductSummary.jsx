@@ -46,7 +46,7 @@ function ProductSummary() {
 
             <Grid className="cart" container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                 <Grid className="quantity" sx={{ display: 'flex' }} xs={4}>
-                    <Button variant="outlined" disableRipple onClick={handleMinusQuantity}>
+                    <Button variant="outlined" onClick={handleMinusQuantity}>
                         <i className="fa-solid fa-minus"></i>
                     </Button>
 
@@ -58,7 +58,7 @@ function ProductSummary() {
                 </Grid>
 
                 <Grid xs={8} className="action-box">
-                    <Button className="add-to-cart" variant="outlined" disableRipple>
+                    <Button className="add-to-cart" variant="outlined">
                         Add To Cart
                     </Button>
                 </Grid>

@@ -2,13 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ThemeProvider } from '@mui/material/styles';
+
 import GlobalStyles from "~/globalStyles";
+import { MuiCustom } from "~/muiCustom/MuiCustom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
       <GlobalStyles>
-          <App />
+          <ThemeProvider theme={MuiCustom}>
+              <App />
+          </ThemeProvider>
       </GlobalStyles>
   // </React.StrictMode>
 );

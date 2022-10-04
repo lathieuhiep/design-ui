@@ -9,13 +9,14 @@ import { ProductImage, ProductSummary } from "~/pages/Shop/SingleProduct/compone
 function SingleProduct() {
     const [value, setValue] = useState('tab-description')
 
-    const handChangeTabList = (event: React.SyntheticEvent, newValue: string) => {
-        setValue(newValue)
+    const handChangeTabList = (index) => {
+        setValue(index)
     }
+
     return (
         <div className="container-wrap container-product">
             <Container>
-                <Grid container className="product-image-summary-wrap" spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                <Grid container className="product-image-summary-wrap" spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} sx={{mb: 2}}>
                     <Grid className="gallery-box" xs={6}>
                         <ProductImage />
                     </Grid>
@@ -28,9 +29,9 @@ function SingleProduct() {
                 <Box className="product-tabs-wrapper">
                     <TabContext value={value}>
                         <Box className="tabs">
-                            <TabList onChange={handChangeTabList}>
-                                <Tab label="Description" value="tab-description" disableRipple />
-                                <Tab label="Reviews" value="tab-reviews" disableRipple />
+                            <TabList onChange={(e, index) => handChangeTabList(index)}>
+                                <Tab label="Description" value="tab-description" />
+                                <Tab label="Reviews" value="tab-reviews" />
                             </TabList>
                         </Box>
 

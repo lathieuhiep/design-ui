@@ -76,4 +76,10 @@
       margin-right: 6px;
     }
   }
+
+  .product-tabs-wrapper {
+    .tabs {
+      border-bottom: 1px solid var(--border-color);
+    }
+  }
 }

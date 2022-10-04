@@ -2,9 +2,6 @@ body {
   // Pagination
   .MuiPagination-root {
     .MuiPaginationItem-root {
-      font-family: var(--font-family);
-      font-size: var(--font-size);
-
       &.Mui-selected,
       &.Mui-selected:hover,
       &:hover {
@@ -17,8 +14,6 @@ body {
 
   // Button
   .MuiButton-root {
-    font-family: inherit;
-    font-size: inherit;
     color: currentColor;
     border-radius: 0;
     border-color: var(--border-color);
@@ -33,8 +28,6 @@ body {
   // Field
   .MuiTextField-root {
     .MuiInputBase-root {
-      font-family: inherit;
-      font-size: inherit;
       border-radius: 0;
 
       &.Mui-focused {

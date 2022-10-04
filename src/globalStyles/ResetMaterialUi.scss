@@ -1,15 +1,64 @@
-// Pagination
-.MuiPagination-root {
-  .MuiPaginationItem-root {
-    font-family: var(--font-family);
-    font-size: var(--font-size);
+body {
+  // Pagination
+  .MuiPagination-root {
+    .MuiPaginationItem-root {
+      font-family: var(--font-family);
+      font-size: var(--font-size);
 
-    &.Mui-selected,
-    &.Mui-selected:hover,
+      &.Mui-selected,
+      &.Mui-selected:hover,
+      &:hover {
+        color: #ffffff;
+        border-color: currentColor;
+        background-color: var(--background-primary);
+      }
+    }
+  }
+
+  // Button
+  .MuiButton-root {
+    font-family: inherit;
+    font-size: inherit;
+    color: currentColor;
+    border-radius: 0;
+    border-color: var(--border-color);
+
     &:hover {
       color: #ffffff;
-      border-color: currentColor;
-      background-color: var(--background-primary);
+      border-color: var(--background-hover);
+      background-color: var(--background-hover);
+    }
+  }
+
+  // Field
+  .MuiTextField-root {
+    .MuiInputBase-root {
+      font-family: inherit;
+      font-size: inherit;
+      border-radius: 0;
+
+      &.Mui-focused {
+        fieldset {
+          border-width: 1px;
+          border-color: var(--border-color);
+        }
+      }
+
+      fieldset {
+        border-color: var(--border-color);
+      }
+
+      &:hover {
+        fieldset {
+          border-color: var(--border-color);
+        }
+      }
+    }
+
+    .MuiInputBase-input {
+      &:focus-visible {
+        outline: unset;
+      }
     }
   }
 }

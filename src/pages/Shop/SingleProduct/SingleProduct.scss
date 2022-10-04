@@ -20,4 +20,60 @@
     font-size: 2rem;
     font-weight: 700;
   }
+
+  .product-excerpt {
+    margin-bottom: 18px;
+  }
+
+  .cart {
+    .quantity {
+      .MuiButton-root {
+        min-width: 30px;
+      }
+
+      .MuiInputBase-root {
+        .MuiInputBase-input {
+          text-align: center;
+        }
+
+        fieldset {
+          border-left-width: 0;
+          border-right-width: 0;
+        }
+      }
+    }
+
+    .action-box {
+      .add-to-cart {
+        color: #ffffff;
+        border-color: var(--background-primary);
+        background-color: var(--background-primary);
+
+        &:hover {
+          border-color: var(--background-hover);
+          background-color: var(--background-hover);
+        }
+      }
+    }
+  }
+
+  .product-meta {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+
+    > div {
+      margin-bottom: 6px;
+    }
+
+    .meta-label {
+      display: inline-block;
+      margin-right: 6px;
+      font-weight: 700;
+    }
+
+    .meta-sep {
+      margin-right: 6px;
+    }
+  }
 }

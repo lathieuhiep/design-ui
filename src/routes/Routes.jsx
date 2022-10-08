@@ -7,6 +7,7 @@ import Blog from "~/pages/Blog";
 import Single from "~/pages/Single";
 import Shop from "~/pages/Shop/Shop";
 import SingleProduct from "~/pages/Shop/SingleProduct";
+import NotFound from "~/pages/NotFound";
 
 // Public routes
 const publicRoutes = [
@@ -16,6 +17,7 @@ const publicRoutes = [
     { path: config.routes.single, component: Single, classPage: 'template-single' },
     { path: config.routes.shop, component: Shop, classPage: 'template-shop' },
     { path: config.routes.singleProduct, component: SingleProduct, classPage: 'template-single-product' },
+    { path: config.routes.notFound, component: NotFound, classPage: 'template-not-found' },
 ]
 
 export { publicRoutes }

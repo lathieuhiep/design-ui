@@ -6,7 +6,6 @@ export const posts = async (params = {}) => {
         return await request.get('posts', {
             params: params
         })
-
     } catch (error) {
         console.log(error)
     }
@@ -15,9 +14,7 @@ export const posts = async (params = {}) => {
 // api post single
 export const postSingle = async (id) => {
     try {
-
         return await request.get(`posts/${id}`)
-
     } catch (error) {
         console.log(error)
     }

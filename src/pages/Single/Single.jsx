@@ -1,19 +1,27 @@
 import {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {Box, Container} from "@mui/material";
 
 import './Single.scss';
+import config from "~/config";
 import { postSingle } from "~/api/postsAPI";
 import images from "~/assets/images";
 
 function Single() {
+    const navigate = useNavigate();
     const { postId } = useParams();
     const [dataPost, setDataPost] = useState({});
 
     useEffect(() => {
-        if ( postId ) {
+        if ( postId && navigate ) {
             const fetchPostSingle = async () => {
                 const result = await postSingle(postId)
+
+                if ( !result ) {
+                    navigate(config.routes.notFound)
+
+                    return true
+                }
 
                 setDataPost(result.data)
             }
@@ -21,7 +29,7 @@ function Single() {
             fetchPostSingle()
         }
 
-    }, [postId])
+    }, [postId, navigate])
 
     return (
         <div className="container-wrap container-single">

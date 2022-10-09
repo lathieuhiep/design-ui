@@ -7,7 +7,7 @@ const routes = {
     singleProduct: '/single-product',
 
     // always to the end
-    notFound: '*'
+    notFound: '/*'
 }
 
 export default routes

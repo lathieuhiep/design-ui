@@ -7,13 +7,24 @@ const MuiCustom = createTheme({
     },
     palette: {
         primary: {
-            main: '#000000',
+            main: '#ff4f41'
         }
     },
     components: {
         MuiButton: {
             defaultProps: {
                 disableRipple: true
+            },
+            styleOverrides: {
+                root: {
+                    boxShadow: "none",
+                    transition: "all 0.4s ease-in-out",
+                    "&:hover": {
+                        backgroundColor: '#000',
+                        boxShadow: "none",
+                    }
+
+                }
             }
         },
         MuiTab: {

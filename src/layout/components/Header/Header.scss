@@ -14,7 +14,66 @@
       display: grid;
       grid-gap: 12px;
       grid-template-columns: repeat(3, max-content);
+
+      .contact-title {
+        font-size: 1.6rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+
+        li {
+          font-weight: 700;
+
+          a {
+            color: var(--color-hover);
+            text-decoration: none;
+
+            &:hover {
+              color: var(--color-primary);
+            }
+          }
+
+          &:not(:last-child) {
+            &:after {
+              position: relative;
+              top: -2px;
+              content: "/";
+              margin-right: 5px;
+              margin-left: 5px;
+              color: var(--color-hover);
+            }
+          }
+        }
+      }
+
+      .fanpage {
+        .text {
+          margin-right: 12px;
+        }
+
+        .link {
+          padding: 0 12px;
+          color: #fff;
+          line-height: 1.8;
+          display: inline-block;
+          border-radius: 3px;
+          background: linear-gradient(180deg,#01acff 0%,#0170ff 100%);
+
+          i {
+            margin-right: 8px;
+          }
+        }
+      }
     }
+  }
+
+  .MuiAlert-root {
+    color: var(--color-white);
+    background-color: var(--background-primary);
   }
 }
 
@@ -23,16 +82,21 @@
   box-shadow: 0 3px 3px -3px rgb(0, 0, 0, 0.3);
 
   &__warp {
-    @include grid('1fr auto', 12px, 24px);
+    @include grid('max-content 1fr auto', 12px, 24px);
   }
 
   .logo {
+    @include flexbox();
+    @include align-items(center);
+
     img {
       padding: 12px 0;
     }
   }
 
   .main-menu {
+    padding-left: 70px;
+
     ul {
       margin: 0;
       padding: 0;
@@ -110,6 +174,15 @@
       a {
         padding-right: 6px;
       }
+    }
+  }
+
+  .btn-support {
+    @include flexbox();
+    @include align-items(center);
+
+    img {
+      margin-right: 9px;
     }
   }
 }

@@ -12,19 +12,6 @@ body {
     }
   }
 
-  // Button
-  .MuiButton-root {
-    color: currentColor;
-    border-radius: 0;
-    border-color: var(--border-color);
-
-    &:hover {
-      color: #ffffff;
-      border-color: var(--background-hover);
-      background-color: var(--background-hover);
-    }
-  }
-
   // Field
   .MuiTextField-root {
     .MuiInputBase-root {

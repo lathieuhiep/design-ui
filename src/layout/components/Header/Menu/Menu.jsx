@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import {Container} from "@mui/material";
+import {Button, Container} from "@mui/material";
 
 import config from "~/config";
 import images from "~/assets/images";
@@ -56,6 +56,13 @@ function Menu({ items }) {
                                 )
                             })}
                         </ul>
+                    </div>
+
+                    <div className="btn-support">
+                        <Button variant="contained" color="primary">
+                            <img src={images.phone} alt="support" />
+                            <span>Tôi cần tư vấn</span>
+                        </Button>
                     </div>
                 </div>
             </Container>

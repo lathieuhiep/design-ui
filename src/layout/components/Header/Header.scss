@@ -137,6 +137,7 @@
         left: 0;
         visibility: hidden;
         opacity: 0;
+        z-index: 10;
         @include transition();
 
         .menu-item {

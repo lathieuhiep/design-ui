@@ -1,0 +1,64 @@
+@import "./src/assets/scss/mixin";
+
+.banner {
+  position: relative;
+  min-height: 550px;
+  background-image: url("/assets/images/bk-banner.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include flexbox();
+  @include align-items(center);
+
+  &::before {
+    position: absolute;
+    content: "";
+    @include overlayFull();
+    background-color: rgba(0,0,0,0.9);
+  }
+
+  &__warp {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+  }
+
+  .left-box {
+    .title {
+      font-size: 1.8rem;
+      color: var(--color-hover);
+    }
+
+    .heading {
+      margin-bottom: 30px;
+    }
+  }
+
+  .right-box {
+    .swiper-pagination {
+      position: static;
+      margin-top: 8px;
+
+      span {
+        background-color: rgba(255,255,255,0.5);
+
+        &:hover,
+        &.swiper-pagination-bullet-active {
+          background-color: #ffffff;
+        }
+      }
+    }
+
+    .title {
+      margin-bottom: 6px;
+    }
+
+    .link {
+      color: var(--color-hover);
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+}

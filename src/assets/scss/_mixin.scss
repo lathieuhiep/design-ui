@@ -138,3 +138,10 @@
   grid-gap: $row-gap $column-gap;
   grid-template-columns: #{$cols};
 }
+
+@mixin overlayFull() {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

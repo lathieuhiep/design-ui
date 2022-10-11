@@ -4,7 +4,8 @@ const images = {
     noImage: require('./no-image.png'),
     productDefault: require('./product-image.png'),
     productDetail: require('./product-detail.png'),
-    phone: require('./icon/icon-phone.png')
+    phone: require('./icon/icon-phone.png'),
+    frame: require('./frame.png')
 }
 
 export default images

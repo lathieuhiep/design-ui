@@ -1,4 +1,11 @@
 body {
+  // Container
+  .MuiContainer-root {
+    @media (min-width: 1200px) {
+      max-width: 1344px;
+    }
+  }
+
   // Pagination
   .MuiPagination-root {
     .MuiPaginationItem-root {

@@ -1,22 +1,15 @@
-.icon-list {
-  .title {
-    margin-bottom: 0;
-    font-size: 1.8rem;
-  }
+.element-icon-list {
+  .item {
+    margin-bottom: 6px;
+    padding: 0;
 
-  ul {
-    li {
-      margin-bottom: 6px;
-      padding: 0;
+    i {
+      font-size: 0.6rem;
+      margin-right: 6px;
+    }
 
-      i {
-        font-size: 0.6rem;
-        margin-right: 6px;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }

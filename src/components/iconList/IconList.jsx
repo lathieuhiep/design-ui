@@ -1,29 +1,20 @@
-import {Box, List, ListItem} from "@mui/material";
+import {List, ListItem} from "@mui/material";
 import './IconList.scss';
 
-function IconList({ title, titleColor = '#da0000', ...propsBox }) {
-    const generate = [0, 1, 2, 3, 4, 5]
+function IconList({ title, titleColor = '#da0000', generate = [0, 1, 2, 3, 4, 5], ...propsBox }) {
 
     return (
-        <Box className="icon-list" {...propsBox}>
-            {title && (
-                <Box className="title" component="h2" color={titleColor}>
-                    {title}
-                </Box>
-            )}
+        <List className="element-icon-list" sx={{padding: 0}} {...propsBox}>
+            {generate.map((item, index) => {
+                return (
+                    <ListItem key={index} className="item">
+                        <i className="fa-solid fa-circle"></i>
 
-            <List>
-                {generate.map((item, index) => {
-                    return (
-                        <ListItem key={index}>
-                            <i className="fa-solid fa-circle"></i>
-
-                            <span className="text">Bạn đang không biết định hướng của mình như nào ?</span>
-                        </ListItem>
-                    )
-                })}
-            </List>
-        </Box>
+                        <span className="text">Bạn đang không biết định hướng của mình như nào ?</span>
+                    </ListItem>
+                )
+            })}
+        </List>
     )
 }
 

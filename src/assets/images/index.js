@@ -4,8 +4,13 @@ const images = {
     noImage: require('./no-image.png'),
     productDefault: require('./product-image.png'),
     productDetail: require('./product-detail.png'),
+    frame: require('./frame.png'),
+
+    // icon
     phone: require('./icon/icon-phone.png'),
-    frame: require('./frame.png')
+    iconLaptop: require('./icon/icon-laptop.png'),
+    iconGrid: require('./icon/icon-grid.png'),
+    iconUserWork: require('./icon/icon-user-work.png'),
 }
 
 export default images

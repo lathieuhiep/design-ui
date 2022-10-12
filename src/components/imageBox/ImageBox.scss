@@ -1,0 +1,15 @@
+.element-box {
+  text-align: center;
+
+  &__image {
+    margin-bottom: 16px;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+  }
+}

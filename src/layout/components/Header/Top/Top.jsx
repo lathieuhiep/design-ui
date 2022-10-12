@@ -1,5 +1,5 @@
 import {Box, Container} from "@mui/material";
-import {Alert} from "@mui/lab";
+import Alert from "@mui/material/Alert";
 
 import InfoItem from "./InfoItem";
 

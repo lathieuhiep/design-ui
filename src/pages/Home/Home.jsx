@@ -10,6 +10,7 @@ import TextBox from "~/components/textBox";
 import CourseBox from "~/components/courseBox";
 import About from "~/components/about";
 import ImageBox from "~/components/imageBox";
+import ProductsGrid from "~/components/productsGrid";
 
 function Home() {
     return (
@@ -217,6 +218,26 @@ function Home() {
                         marginTop: '52px',
                         textAlign: 'center'
                     }} />
+                </Container>
+            </Box>
+
+            <Box className="element-warp" mb={8}>
+                <Container>
+                    <Box textAlign={'center'} mb={4}>
+                        <TextBox
+                            component={'p'}
+                            text={'Tham khảo sản phẩm'}
+                            sx={{
+                                mb: 1,
+                                color: '#ff4f41',
+                                fontWeight: 500
+                            }}
+                        />
+
+                        <TextBox component={'h3'} text={'SẢN PHẨM HỌC VIÊN SAU KHÓA HỌC'} />
+                    </Box>
+
+                    <ProductsGrid />
                 </Container>
             </Box>
         </div>

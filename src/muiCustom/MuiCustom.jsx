@@ -22,6 +22,8 @@ const MuiCustom = createTheme({
                     "&:hover": {
                         backgroundColor: '#000',
                         boxShadow: "none",
+                        borderColor: '#000',
+                        color: '#fff'
                     }
 
                 }

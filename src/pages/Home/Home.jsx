@@ -7,10 +7,11 @@ import Banner from "~/components/banner";
 import IconList from "~/components/iconList";
 import RegisterCourseModal from "~/components/registerCourseModal";
 import TextBox from "~/components/textBox";
-import CourseBox from "~/components/courseBox";
+import CourseGrid from "~/components/courseGrid";
 import About from "~/components/about";
 import ImageBox from "~/components/imageBox";
 import ProductsGrid from "~/components/productsGrid";
+import Testimonial from "~/components/testimonial";
 
 function Home() {
     return (
@@ -76,19 +77,7 @@ function Home() {
                         />
                     </Box>
 
-                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                        <Grid xs={2} sm={4} md={4}>
-                            <CourseBox />
-                        </Grid>
-
-                        <Grid xs={2} sm={4} md={4}>
-                            <CourseBox />
-                        </Grid>
-
-                        <Grid xs={2} sm={4} md={4}>
-                            <CourseBox />
-                        </Grid>
-                    </Grid>
+                    <CourseGrid />
                 </Container>
             </Box>
 
@@ -238,6 +227,27 @@ function Home() {
                     </Box>
 
                     <ProductsGrid />
+                </Container>
+            </Box>
+
+            <Box className="element-warp" mb={8}>
+                <Container>
+                    <Box component={'h3'} sx={{
+                            marginBottom: '38px',
+                            paddingTop: '38px',
+                            textAlign: 'center',
+                            borderTop: '1px solid #dfdfdf'
+                        }}
+                    >
+                        Ý KIẾN HỌC VIÊN SAU KHÓA HỌC
+                    </Box>
+
+                    <Testimonial />
+
+                    <RegisterCourseModal sx={{
+                        marginTop: '30px',
+                        textAlign: 'center'
+                    }} />
                 </Container>
             </Box>
         </div>

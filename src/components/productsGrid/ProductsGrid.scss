@@ -1,0 +1,74 @@
+@import "src/assets/scss/mixin";
+
+.element-student-product-grid {
+  .item {
+    padding: 12px 16px 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.06);
+    background-color: #ffffff;
+
+    &__thumbnail {
+      margin-bottom: 12px;
+
+      a {
+        position: relative;
+        display: block;
+        height: 277px;
+        overflow: hidden;
+      }
+
+      img {
+        top: 0;
+        width: 100%;
+        height: auto;
+        transform: translateY(0px);
+        @include transition(all 4s);
+      }
+    }
+
+    &__title {
+      margin-bottom: 8px;
+      font-size: 15px;
+      text-transform: uppercase;
+
+      a {
+        color: var(--color-title);
+
+        span {
+          color: var(--color-primary);
+          @include transition();
+        }
+
+        &:hover {
+          color: var(--color-hover);
+
+          span {
+            color: var(--color-hover);
+          }
+        }
+      }
+    }
+
+    &__info {
+      .info-student {
+        font-size: 1.3rem;
+
+        i {
+          text-align: center;
+          color: #9F9F9F;
+          font-size: 1.1rem;
+          width: 17px;
+          margin-right: 4px;
+        }
+      }
+    }
+
+    &:hover {
+      .item__thumbnail {
+        img {
+          transform: translateY(calc(-100% + 277px));
+        }
+      }
+    }
+  }
+}

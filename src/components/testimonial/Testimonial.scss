@@ -1,0 +1,28 @@
+.element-testimonial {
+  .item {
+    &__info {
+      margin-bottom: 22px;
+      display: grid;
+      grid-gap: 16px;
+      grid-template-columns: minmax(auto, 80px) 1fr;
+      align-items: center;
+    }
+
+    .avatar {
+      img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    .name {
+      margin-bottom: 4px;
+    }
+
+    p {
+      color: #3C3C3E;
+    }
+  }
+}

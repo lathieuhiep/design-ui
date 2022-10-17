@@ -1,7 +1,6 @@
 import {Box} from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import ImageBox from "~/components/imageBox";
-import images from "~/assets/images";
 import {useEffect, useState} from "react";
 import {BenefitsAPI} from "~/api/BenefitsAPI";
 

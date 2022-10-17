@@ -1,5 +1,4 @@
 import {Box, Container} from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
 
 import './Home.scss';
 import Banner from "~/components/banner";

@@ -12,7 +12,7 @@ const MenuItems = [
     },
     {
         title: 'About',
-        to: '/about'
+        to: '/regulations'
     },
     {
         title: 'Blog',

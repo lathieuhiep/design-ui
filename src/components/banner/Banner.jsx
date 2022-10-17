@@ -1,3 +1,4 @@
+import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {Box, Container} from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
@@ -9,18 +10,23 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import './Banner.scss';
-import images from "~/assets/images";
+import { BannerAPI } from "~/api/BannerAPI";
 import RegisterCourseModal from "~/components/registerCourseModal";
 
-const productGallery = [
-    images.productDetail,
-    images.productDetail,
-    images.productDetail,
-    images.productDetail,
-    images.productDetail,
-]
-
 function Banner() {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        // call api banner
+        const fetchBanner = async () => {
+            const result = await BannerAPI()
+
+            setData(result.data)
+        }
+
+        fetchBanner()
+    }, [])
+
     return (
         <Box className="banner">
             <Container>
@@ -31,54 +37,58 @@ function Banner() {
                     columnSpacing={{ md: 4 }}
                     alignItems="center"
                 >
-                    <Grid className="left-box" xs={7}>
-                        <Box mb={4} pr={6}>
+                    <Grid className="left-box" xs={8}>
+                        <Box mb={4} pr={7} width={'80ch'}>
                             <p className="title">
-                                CÙNG GET DESIGN
+                                {data.text}
                             </p>
 
                             <h1 className="heading">
-                                Trở thành UXUI Designer
+                                {data.heading}
                             </h1>
 
                             <div className="desc">
-                                Get Design – Chuyên đào tạo các khóa học UXUI, Web design và App mobile. Học viên được học trực tiếp kiến thức cơ bản & chuyên sâu bám sát nhu cầu thực tế để đáp ứng công việc cho học viên sau khi hoàn thành khóa học.
+                                {data.description}
                             </div>
                         </Box>
 
                         <RegisterCourseModal showNote={true} />
                     </Grid>
 
-                    <Grid className="right-box" xs={5}>
-                        <Swiper
-                            loop={true}
-                            modules={[Pagination]}
-                            pagination={{ clickable: true }}
-                            className="slider-images"
-                        >
-                            {productGallery.map((item, index) => {
-                                return (
-                                    <SwiperSlide key={index}>
-                                        <img src={item} alt={'product'} />
-                                    </SwiperSlide>
-                                )
-                            })}
-                        </Swiper>
+                    <Grid className="right-box" xs={4}>
+                        { data.gallery && (
+                            <>
+                                <Swiper
+                                    loop={true}
+                                    modules={[Pagination]}
+                                    pagination={{ clickable: true }}
+                                    className="slider-images"
+                                >
+                                    {data.gallery.map((item, index) => {
+                                        return (
+                                            <SwiperSlide key={index}>
+                                                <img src={item} alt={'product'} />
+                                            </SwiperSlide>
+                                        )
+                                    })}
+                                </Swiper>
 
-                        <Box
-                            sx={{
-                                textAlign: 'center',
-                                mt: 2
-                            }}
-                        >
-                            <p className="title">
-                                SẢN PHẨM HỌC VIÊN
-                            </p>
+                                <Box
+                                    sx={{
+                                        textAlign: 'center',
+                                        mt: 2
+                                    }}
+                                >
+                                    <p className="title">
+                                        SẢN PHẨM HỌC VIÊN
+                                    </p>
 
-                            <Link className="link" to={'/san-pham-hoc-vien-thiet-ke'}>
-                                Xem thêm
-                            </Link>
-                        </Box>
+                                    <Link className="link" to={'/san-pham-hoc-vien-thiet-ke'}>
+                                        Xem thêm
+                                    </Link>
+                                </Box>
+                            </>
+                        ) }
                     </Grid>
                 </Grid>
             </Container>

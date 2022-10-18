@@ -67,7 +67,7 @@ function Banner() {
                                     {data.gallery.map((item, index) => {
                                         return (
                                             <SwiperSlide key={index}>
-                                                <img src={item} alt={'product'} />
+                                                <img src={item} alt={'product'} loading="lazy" />
                                             </SwiperSlide>
                                         )
                                     })}

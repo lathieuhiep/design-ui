@@ -27,7 +27,7 @@ function CourseGrid() {
                     <Box className="item">
                         <figure className="item__thumbnail">
                             <Link to={'/'}>
-                                <img src={item.thumb} alt={item.title} />
+                                <img src={item.thumb} alt={item.title} loading="lazy" />
                             </Link>
                         </figure>
 

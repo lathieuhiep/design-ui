@@ -25,6 +25,7 @@ function Regulations() {
                         alt={data.image.alt}
                         width={data.image.width}
                         height={data.image.height}
+                        loading="lazy"
                     />
                 )}
             </div>

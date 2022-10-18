@@ -33,7 +33,7 @@ function ProductsGrid() {
                         <div className="item">
                             <div className="item__thumbnail">
                                 <Link to={'/'} >
-                                    <img src={item.thumb} alt={item.title} />
+                                    <img src={item.thumb} alt={item.title} loading="lazy" />
                                 </Link>
                             </div>
 

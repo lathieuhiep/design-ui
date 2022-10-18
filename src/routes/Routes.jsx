@@ -1,13 +1,15 @@
+import { lazy } from "react";
+
 import config from "~/config";
 
 // Pages
-import Home from "~/pages/Home";
-import Course from "~/pages/Course";
-import Blog from "~/pages/Blog";
-import Single from "~/pages/Single";
-import Shop from "~/pages/Shop/Shop";
-import SingleProduct from "~/pages/Shop/SingleProduct";
-import NotFound from "~/pages/NotFound";
+const Home = lazy(() => import('~/pages/Home'));
+const Course = lazy(() => import('~/pages/Course'));
+const Blog = lazy(() => import('~/pages/Blog'));
+const Single = lazy(() => import('~/pages/Single'));
+const Shop = lazy(() => import('~/pages/Shop/Shop'));
+const SingleProduct = lazy(() => import('~/pages/Shop/SingleProduct'));
+const NotFound = lazy(() => import('~/pages/NotFound'));
 
 // Public routes
 const publicRoutes = [

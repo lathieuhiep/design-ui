@@ -38,7 +38,7 @@ function Testimonial() {
                     <SwiperSlide key={item.id} className="item">
                         <div className="item__info">
                             <div className="avatar">
-                                <img src={item.avatar} alt={item.title} />
+                                <img src={item.avatar} alt={item.title} loading="lazy" />
                             </div>
 
                             <div className="student">

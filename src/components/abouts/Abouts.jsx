@@ -1,10 +1,12 @@
 import {useEffect, useState} from "react";
 import Grid from "@mui/material/Unstable_Grid2";
 import {Box} from "@mui/material";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 import './Abouts.scss';
 import { AboutsAPI } from "~/api/AboutsAPI";
 import RegisterCourseModal from "~/components/registerCourseModal";
+
 
 function Abouts() {
     const [data, setData] = useState([])
@@ -23,7 +25,7 @@ function Abouts() {
         <Grid container className="element-abouts" rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
             <Grid xs={6}>
                 <Box textAlign={"center"}>
-                    <img loading="lazy" alt="" src={data.media_url} />
+                    <LazyLoadImage src={data.media_url} alt="" />
                 </Box>
             </Grid>
 

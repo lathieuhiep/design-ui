@@ -2,6 +2,7 @@ import {useEffect, useState} from "react"
 import './Regulations.scss'
 import { RegulationsAPI } from "~/api/RegulationsAPI"
 import {Box} from "@mui/material";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 function Regulations() {
     const [data, setData] = useState([]);
@@ -20,12 +21,11 @@ function Regulations() {
         <div className="element-about">
             <div className="thumbnail">
                 {data.image && (
-                    <img
+                    <LazyLoadImage
                         src={data.image.url}
                         alt={data.image.alt}
                         width={data.image.width}
                         height={data.image.height}
-                        loading="lazy"
                     />
                 )}
             </div>

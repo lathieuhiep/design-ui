@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {Box} from "@mui/material";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Pagination} from "swiper";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 // Import Swiper styles
 import 'swiper/css';
@@ -9,6 +10,7 @@ import 'swiper/css/pagination';
 
 import './Testimonial.scss';
 import { TestimonialAPI } from "~/api/TestimonialAPI";
+
 
 function Testimonial() {
     const [data, setData] = useState([])
@@ -38,7 +40,7 @@ function Testimonial() {
                     <SwiperSlide key={item.id} className="item">
                         <div className="item__info">
                             <div className="avatar">
-                                <img src={item.avatar} alt={item.title} loading="lazy" />
+                                <LazyLoadImage src={item.avatar} alt={item.title} />
                             </div>
 
                             <div className="student">

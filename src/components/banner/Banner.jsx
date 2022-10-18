@@ -4,6 +4,9 @@ import {Box, Container} from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import {Pagination} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
+import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -67,7 +70,7 @@ function Banner() {
                                     {data.gallery.map((item, index) => {
                                         return (
                                             <SwiperSlide key={index}>
-                                                <img src={item} alt={'product'} loading="lazy" />
+                                                <LazyLoadImage src={item} alt={'product'} effect="opacity" />
                                             </SwiperSlide>
                                         )
                                     })}

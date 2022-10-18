@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import {Box} from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 import './CourseGrid.scss';
 import {CoursesAPI} from "~/api/CoursesAPI";
@@ -27,7 +28,7 @@ function CourseGrid() {
                     <Box className="item">
                         <figure className="item__thumbnail">
                             <Link to={'/'}>
-                                <img src={item.thumb} alt={item.title} loading="lazy" />
+                                <LazyLoadImage src={item.thumb} alt={item.title} />
                             </Link>
                         </figure>
 

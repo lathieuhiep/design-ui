@@ -5,6 +5,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 
 import './ProductsGrid.scss';
 import {StudentProductsAPI} from "~/api/StudentProductsAPI";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 function ProductsGrid() {
     const [data, setData] = useState([])
@@ -33,7 +34,7 @@ function ProductsGrid() {
                         <div className="item">
                             <div className="item__thumbnail">
                                 <Link to={'/'} >
-                                    <img src={item.thumb} alt={item.title} loading="lazy" />
+                                    <LazyLoadImage src={item.thumb} alt={item.title} />
                                 </Link>
                             </div>
 
